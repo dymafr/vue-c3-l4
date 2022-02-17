@@ -1,10 +1,16 @@
 <template>
-  <h1 :class="h1Title" :id="h1id">Bonjour monde !</h1>
+  <h1>{{ getTitle() }}</h1>
+  <input :type="getType()" />
 </template>
 
 <script setup lang="ts">
-const h1Title = 'uneClasse';
-const h1id = 'unId';
+function getTitle() {
+  return 'Je suis un titre';
+}
+
+function getType() {
+  return 'number';
+}
 </script>
 
 <style></style>
